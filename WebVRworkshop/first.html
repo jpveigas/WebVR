@@ -1,0 +1,42 @@
+<html>
+    
+     <head>
+           <script src="http://aframe.io/releases/0.5.0/aframe.min.js"></script>
+			<title> My first VR</title>
+      </head>
+      <a-scene>
+  <a-assets>
+    <img id="animal"  src="images/cir.jpg"/>
+    <img id="sky" src="images/sky.jpg"/>
+     <img id="spr" src="images/e1.png"/>
+
+      <img id="my-image" src="images/test.jpg">
+  </a-assets>
+      <a-sphere src="#spr" radius="2"  position="3 1 0"  opacity="0.8"></a-sphere>
+     
+     <a-entity>
+  <a-entity position="5 0 0"></a-entity>
+  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+</a-entity>a
+       <!--a-light type="point" color="blue" position="0 5 0"></a-light -->
+       <a-sky src="#sky"></a-sky>
+       <a-torus color="#43A367" arc="340" radius="3"   position="-3 1 0" radius-tubular="0.1"></a-torus>
+
+       <a-circle src="#animal" rotation="-90 0 0" radius="3"></a-circle>
+
+         <!-- Using the asset management system. -->
+  <a-curvedimage src="#my-image" height="3.0" radius="5.7" theta-length="72"
+                 rotation="0 100 0"  position="3 1 6"  scale="0.9 0.8 0.8"></a-curvedimage>
+
+
+  <a-text value="HELLO WORLD"   position="3 -3 0"></a-text>
+
+      </a-scene>
+
+</html>
+
+
